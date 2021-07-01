@@ -1,5 +1,7 @@
 # SpiralTest
 
+App.js === main - there u can find DrawerNavigator that located in App/Screens/Home/Drawer
+
 We have: App => Assets - Screens - Theme:
 
 Assets =>
@@ -26,4 +28,3 @@ Drawer =>
 - Shared(that is Drawer)
 - TabBar;
 
-App.js === main - there u can find DrawerNavigator that located in App/Screens/Home/Drawer
