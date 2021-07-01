@@ -1,0 +1,14 @@
+com/spiral/spiralapp/ReactNativeFlipper.java
+ com.spiral.spiralapp.ReactNativeFlipper
+ com.spiral.spiralapp.ReactNativeFlipper$1
+ com.spiral.spiralapp.ReactNativeFlipper$2
+ com.spiral.spiralapp.ReactNativeFlipper$2$1
+com/spiral/spiralapp/MainApplication.java
+ com.spiral.spiralapp.MainApplication
+ com.spiral.spiralapp.MainApplication$1
+com/spiral/spiralapp/BuildConfig.java
+ com.spiral.spiralapp.BuildConfig
+com/spiral/spiralapp/MainActivity.java
+ com.spiral.spiralapp.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

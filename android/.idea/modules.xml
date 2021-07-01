@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpiralApp.iml" filepath="$PROJECT_DIR$/.idea/modules/SpiralApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SpiralApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SpiralApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-262223356/SpiralApp.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-262223356/SpiralApp.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-96045229/SpiralApp.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-96045229/SpiralApp.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1880121623/SpiralApp.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/-1880121623/SpiralApp.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1453783300/SpiralApp.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-1453783300/SpiralApp.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-983191020/SpiralApp.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-983191020/SpiralApp.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-218359453/SpiralApp.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-218359453/SpiralApp.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>
