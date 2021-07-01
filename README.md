@@ -26,4 +26,4 @@ Drawer =>
 - Shared(that is Drawer)
 - TabBar;
 
-App.js => main - there u can find DrawerNavigator that located in App/Screens/Home/Drawer
+App.js === main - there u can find DrawerNavigator that located in App/Screens/Home/Drawer
