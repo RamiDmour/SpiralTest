@@ -55,6 +55,19 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 	},
+	title: {
+		color: 'white',
+		fontWeight: 'bold',
+		fontSize: 20,
+		alignSelf: 'center',
+	},
+	subtitle: {
+		color: 'white',
+		fontSize: 10,
+	},
+	littleGreyText: {
+		color: 'grey',
+	},
 });
 
 export default styles;

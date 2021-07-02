@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import styles from '../Home/style/style';
 import Icon from 'react-native-vector-icons/Ionicons';
 import UserAvatar from '../Home/UserAvatar';
-
+import CustomHeader from '../Checking/CustomHeader';
 function SavingsScreen({}) {
 	return (
 		<View style={styles.tapBar}>
@@ -15,7 +15,7 @@ function SavingsScreen({}) {
 
 const SavingsStack = createStackNavigator();
 
-function SavingsStackScreen(props) {
+function SavingsStackScreen({ navigation }) {
 	return (
 		<SavingsStack.Navigator
 			screenOptions={{
@@ -32,13 +32,20 @@ function SavingsStackScreen(props) {
 				name="Savings"
 				component={SavingsScreen}
 				options={{
-					title: 'Savings',
+					title: (
+						<CustomHeader
+							title="Savings"
+							subtitle="Buy a house (...4044)"
+							stylesTitle={styles.title}
+							stylesSubtitle={styles.subtitle}
+						/>
+					),
 					headerLeft: () => (
 						<Icon.Button
 							name="arrow-back-outline"
 							size={25}
 							backgroundColor="#C81A7C"
-							onPress={() => props.navigation.navigate('Home')}
+							onPress={() => navigation.navigate('Home')}
 						/>
 					),
 					headerRight: () => (

@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import styles from '../Home/style/style';
 import Icon from 'react-native-vector-icons/Ionicons';
 import UserAvatar from '../Home/UserAvatar';
+import CustomHeader from './CustomHeader';
 
 function CheckingScreen({}) {
 	return (
@@ -15,7 +16,7 @@ function CheckingScreen({}) {
 
 const CheckingStack = createStackNavigator();
 
-function CheckingStackScreen(props) {
+function CheckingStackScreen({ navigation }) {
 	return (
 		<CheckingStack.Navigator
 			screenOptions={{
@@ -24,7 +25,6 @@ function CheckingStackScreen(props) {
 				},
 				headerTintColor: '#fff',
 				headerTitleStyle: {
-					fontWeight: 'bold',
 					alignSelf: 'center',
 				},
 			}}>
@@ -32,13 +32,20 @@ function CheckingStackScreen(props) {
 				name="Checking"
 				component={CheckingScreen}
 				options={{
-					title: 'Checking',
+					title: (
+						<CustomHeader
+							title="Checking"
+							subtitle="Main account (...0353)"
+							stylesTitle={styles.title}
+							stylesSubtitle={styles.subtitle}
+						/>
+					),
 					headerLeft: () => (
 						<Icon.Button
 							name="arrow-back-outline"
 							size={25}
 							backgroundColor="#C81A7C"
-							onPress={() => props.navigation.navigate('Home')}
+							onPress={() => navigation.navigate('Home')}
 						/>
 					),
 					headerRight: () => (

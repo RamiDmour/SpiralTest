@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
 	return (
-		<Drawer.Navigator initialRouteName="Home" drawerContent={(props) => <DrawerContent {...props} />}>
+		<Drawer.Navigator headerMode="none" initialRouteName="Home" drawerContent={(props) => <DrawerContent {...props} />}>
 			<Drawer.Screen name="HomeDrawer" component={TabNavigator} />
 			<Drawer.Screen name="Checking" component={CheckingStackScreen} />
 			<Drawer.Screen name="Savings" component={SavingsStackScreen} />
