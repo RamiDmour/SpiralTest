@@ -13,6 +13,7 @@ MERGED from [:react-native-gesture-handler] /Users/aliaksandr/Documents/first/Aw
 MERGED from [:react-native-reanimated] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-splash-screen] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
 MERGED from [:react-native-vector-icons] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.63.0] /Users/aliaksandr/.gradle/caches/transforms-2/files-2.1/7f2d6e7105dd71d55ac0f864e23eae8a/jetified-react-native-0.63.0/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/aliaksandr/.gradle/caches/transforms-2/files-2.1/5c64f35c4f864d4cd139ccbbff91ceb9/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -93,6 +94,8 @@ application
 ADDED from /Users/aliaksandr/Documents/first/AwesomeProject/android/app/src/main/AndroidManifest.xml:6:5-24:19
 MERGED from /Users/aliaksandr/Documents/first/AwesomeProject/android/app/src/main/AndroidManifest.xml:6:5-24:19
 MERGED from /Users/aliaksandr/Documents/first/AwesomeProject/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from [:react-native-splash-screen] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-12:19
+MERGED from [:react-native-splash-screen] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-12:19
 MERGED from [com.facebook.react:react-native:0.63.0] /Users/aliaksandr/.gradle/caches/transforms-2/files-2.1/7f2d6e7105dd71d55ac0f864e23eae8a/jetified-react-native-0.63.0/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.63.0] /Users/aliaksandr/.gradle/caches/transforms-2/files-2.1/7f2d6e7105dd71d55ac0f864e23eae8a/jetified-react-native-0.63.0/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/aliaksandr/.gradle/caches/transforms-2/files-2.1/5fb5c0c623111e89d0cb2cc6cbe55df8/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
@@ -171,6 +174,8 @@ MERGED from [:react-native-safe-area-context] /Users/aliaksandr/Documents/first/
 MERGED from [:react-native-safe-area-context] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/aliaksandr/Documents/first/AwesomeProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.63.0] /Users/aliaksandr/.gradle/caches/transforms-2/files-2.1/7f2d6e7105dd71d55ac0f864e23eae8a/jetified-react-native-0.63.0/AndroidManifest.xml:7:5-9:41

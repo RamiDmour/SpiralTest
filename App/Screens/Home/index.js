@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { View, Image, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import styles from './style/style';
 import Icon from 'react-native-vector-icons/Ionicons';
-import UserAvatar from './UserAvatar';
 import moment from 'moment';
 import { Text } from 'react-native-paper';
+
+import UserAvatar from './UserAvatar';
 import CustomHeader from '../Checking/CustomHeader';
+import styles from './style/style';
 
 function HomeScreen({ navigation }) {
 	const [currentDate, setCurrentDate] = useState('');
 	useEffect(() => {
-		var date = moment().format('MMM DD, YYYY');
+		let date = moment().format('MMM DD, YYYY');
 		setCurrentDate(date);
 	}, []);
-	const navigateChecking = () => navigation.navigate('Checking');
-	const navigateSavings = () => navigation.navigate('Savings');
-	const [subtitleChecking, setSubtitleChecking] = useState('Main account (...0353)');
-	const [subtitleSavings, setSubtitleSaving] = useState('Buy a house (...4044)');
-	const [subtitleGoodness, setSubtitleGoodness] = useState('Cash Rewards');
+	const navigateChecking = () =>
+		navigation.navigate('Checking', { title: 'Checking', subtitle: 'Main account (...0353)' });
+	const navigateSavings = () => navigation.navigate('Savings', { title: 'Savings', subtitle: 'Buy a house (...4044)' });
 
 	return (
 		<ScrollView style={styles.screenView}>
@@ -33,7 +32,7 @@ function HomeScreen({ navigation }) {
 					<Text style={{ alignSelf: 'center', color: 'grey', marginTop: 3, fontSize: 12 }}>Total Available Cash</Text>
 					<View style={{ marginTop: 10 }}>
 						<TouchableOpacity style={styles.button} onPress={navigateChecking}>
-							<CustomHeader title="Checking" subtitle={subtitleChecking} stylesSubtitle={styles.littleGreyText} />
+							<CustomHeader title="Checking" subtitle="Main account (...0353)" stylesSubtitle={styles.littleGreyText} />
 							<View style={{ flexDirection: 'row' }}>
 								<Text style={{ fontSize: 25 }}>
 									$1,500.<Text style={{ fontSize: 20 }}>20</Text>
@@ -48,7 +47,7 @@ function HomeScreen({ navigation }) {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={styles.button} onPress={navigateSavings}>
-							<CustomHeader title="Savings" subtitle={subtitleSavings} stylesSubtitle={styles.littleGreyText} />
+							<CustomHeader title="Savings" subtitle="Buy a house (...4044)" stylesSubtitle={styles.littleGreyText} />
 							<View style={{ flexDirection: 'row' }}>
 								<Text style={{ fontSize: 25 }}>
 									$5000.<Text style={{ fontSize: 20 }}>20</Text>
@@ -63,7 +62,7 @@ function HomeScreen({ navigation }) {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={styles.button}>
-							<CustomHeader title="Goodness" subtitle={subtitleGoodness} stylesSubtitle={styles.littleGreyText} />
+							<CustomHeader title="Goodness" subtitle="Cash Rewards" stylesSubtitle={styles.littleGreyText} />
 							<View style={{ flexDirection: 'row' }}>
 								<Text style={{ fontSize: 25 }}>
 									$500.<Text style={{ fontSize: 20 }}>40</Text>

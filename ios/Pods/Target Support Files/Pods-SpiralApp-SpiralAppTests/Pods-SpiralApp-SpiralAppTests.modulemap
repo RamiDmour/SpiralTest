@@ -1,0 +1,6 @@
+module Pods_SpiralApp_SpiralAppTests {
+  umbrella header "Pods-SpiralApp-SpiralAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

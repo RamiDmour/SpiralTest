@@ -16,7 +16,8 @@ function CheckingScreen({}) {
 
 const CheckingStack = createStackNavigator();
 
-function CheckingStackScreen({ navigation }) {
+function CheckingStackScreen({ navigation, route }) {
+	const { title, subtitle } = route.params;
 	return (
 		<CheckingStack.Navigator
 			screenOptions={{
@@ -34,8 +35,8 @@ function CheckingStackScreen({ navigation }) {
 				options={{
 					title: (
 						<CustomHeader
-							title="Checking"
-							subtitle="Main account (...0353)"
+							title={title}
+							subtitle={subtitle}
 							stylesTitle={styles.title}
 							stylesSubtitle={styles.subtitle}
 						/>

@@ -16,7 +16,6 @@ target 'SpiralApp' do
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
-  pod 'RNImageFilter', :path => '../node_modules/react-native-image-filter'
 
   target 'SpiralAppTests' do
     inherit! :complete

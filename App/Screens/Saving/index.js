@@ -15,7 +15,8 @@ function SavingsScreen({}) {
 
 const SavingsStack = createStackNavigator();
 
-function SavingsStackScreen({ navigation }) {
+function SavingsStackScreen({ navigation, route }) {
+	const { title, subtitle } = route.params;
 	return (
 		<SavingsStack.Navigator
 			screenOptions={{
@@ -34,8 +35,8 @@ function SavingsStackScreen({ navigation }) {
 				options={{
 					title: (
 						<CustomHeader
-							title="Savings"
-							subtitle="Buy a house (...4044)"
+							title={title}
+							subtitle={subtitle}
 							stylesTitle={styles.title}
 							stylesSubtitle={styles.subtitle}
 						/>

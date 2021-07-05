@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		marginHorizontal: '7%',
 		marginBottom: '10%',
-		marginTop: '80%',
+		marginTop: '135%',
+		position: 'absolute',
 	},
 	login: {
 		justifyContent: 'center',
@@ -32,11 +33,12 @@ const styles = StyleSheet.create({
 		marginBottom: -10,
 	},
 	textInput: {
+		flexDirection: 'row',
 		borderBottomColor: 'grey',
 		borderBottomWidth: 1,
-		paddingBottom: 5,
 		marginBottom: 15,
-		paddingLeft: -4,
+		justifyContent: 'space-between',
+		alignItems: 'center',
 	},
 	forgot: {
 		color: '#C81A7C',
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({
 	image: {
 		width: 25,
 		height: 25,
-		paddingRight: 5,
+		marginRight: 5,
 	},
 });
 

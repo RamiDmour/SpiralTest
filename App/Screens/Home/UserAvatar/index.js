@@ -4,6 +4,8 @@ import { Avatar, ListItem } from 'react-native-elements';
 
 import avatarImage from '../../../Assets/Images/oval.png';
 
+import { AuthContext } from '../../SignIn/components/context';
+
 const styles = StyleSheet.create({
 	userMenuContent: {
 		position: 'absolute',
@@ -23,6 +25,8 @@ export default function UserAvatar() {
 		setUserMenuVisible(true);
 	};
 
+	const { signOut } = React.useContext(AuthContext);
+
 	return (
 		<>
 			<Avatar rounded source={avatarImage} onPress={showUserMenu} />
@@ -30,7 +34,7 @@ export default function UserAvatar() {
 				<TouchableWithoutFeedback onPress={hideUserMenu}>
 					<View style={styles.userMenuOverlay} />
 				</TouchableWithoutFeedback>
-				<ListItem style={styles.userMenuContent}>
+				<ListItem style={styles.userMenuContent} onPress={signOut}>
 					<ListItem.Content>
 						<ListItem.Title>Log out</ListItem.Title>
 					</ListItem.Content>
