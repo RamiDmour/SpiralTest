@@ -31,12 +31,12 @@ const styles = StyleSheet.create({
 	emailPasswordText: {
 		fontSize: 17,
 		marginBottom: -10,
+		marginTop: 10,
 	},
 	textInput: {
 		flexDirection: 'row',
 		borderBottomColor: 'grey',
-		borderBottomWidth: 1,
-		marginBottom: 15,
+		borderBottomWidth: 2,
 		justifyContent: 'space-between',
 		alignItems: 'center',
 	},
@@ -90,6 +90,9 @@ const styles = StyleSheet.create({
 		width: 25,
 		height: 25,
 		marginRight: 5,
+	},
+	errorMess: {
+		color: '#C81A7C',
 	},
 });
 

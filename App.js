@@ -10,6 +10,8 @@ import { AuthContext } from './App/Screens/SignIn/components/context';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import Users from './App/Screens/SignIn/indus/users';
+
 export default function App() {
 	// const [isLoading, setIsLoading] = useState(true);
 	// const [userToken, setUserToken] = useState(null);
@@ -53,18 +55,16 @@ export default function App() {
 	};
 
 	const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState);
+
 	const authContext = useMemo(
 		() => ({
-			signIn: async (userName, password) => {
-				let userToken;
-				userToken = null;
-				if (userName === 'user' && password === 'pass') {
-					try {
-						userToken = 'asdasd';
-						await AsyncStorage.setItem('userToken', userToken);
-					} catch (e) {
-						console.log(e);
-					}
+			signIn: async (foundUser) => {
+				const userToken = String(foundUser[0].userToken);
+				const userName = foundUser[0].username;
+				try {
+					await AsyncStorage.setItem('userToken', userToken);
+				} catch (e) {
+					console.log(e);
 				}
 				// console.log('user token', userToken);
 				dispatch({ type: 'LOGIN', id: userName, token: userToken });
