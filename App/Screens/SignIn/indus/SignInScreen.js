@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TouchableOpacity, KeyboardAvoidingView, Image, TextInput, Text, View, Alert } from 'react-native';
 
 import Feather from 'react-native-vector-icons/Feather';
@@ -8,6 +8,8 @@ import styles from './style';
 
 import { AuthContext } from '../components/context';
 import Users from './users';
+import { useDispatch, useSelector } from 'react-redux';
+import { signIn, SIGN_IN_SET_LOADING } from '../../../../store/action-creators/authAction';
 
 function SignInScreen({ navigation }) {
 	const [data, setData] = useState({
@@ -19,7 +21,8 @@ function SignInScreen({ navigation }) {
 		isValidPassword: true,
 	});
 
-	const { signIn } = React.useContext(AuthContext);
+	const dispatch = useDispatch()
+	const { loading, token, error } = useSelector(state => state.auth)
 
 	const textInputChange = (val) => {
 		if (val.length >= 4) {
@@ -77,19 +80,29 @@ function SignInScreen({ navigation }) {
 	};
 
 	const loginHandle = (userName, password) => {
-		const foundUser = Users.filter((item) => {
-			return userName == item.username && password == item.password;
-		});
-		if (data.username.length == 0 || data.password.length == 0) {
-			Alert.alert('Wrong Input!', 'Username or password field cannot be empty', [{ text: 'Okay' }]);
-			return;
-		}
-		if (foundUser.length == 0) {
-			Alert.alert('Invalid User!', 'Username or password is incorrect', [{ text: 'Okay' }]);
-			return;
-		}
-		signIn(foundUser);
+		// const foundUser = Users.filter((item) => {
+		// 	return userName == item.username && password == item.password;
+		// });
+		// if (data.username.length == 0 || data.password.length == 0) {
+		// 	Alert.alert('Wrong Input!', 'Username or password field cannot be empty', [{ text: 'Okay' }]);
+		// 	return;
+		// }
+		// if (foundUser.length == 0) {
+		// 	Alert.alert('Invalid User!', 'Username or password is incorrect', [{ text: 'Okay' }]);
+		// 	return;
+		// }
+		// dispatch(signIn(userName, password))
+		dispatch({ type: SIGN_IN_SET_LOADING, payload: true })
 	};
+
+	console.log(loading)
+	if (loading) {
+		return <View><Text>Loading...</Text></View>
+	}
+
+	if (error) {
+		return <View><Text>Error</Text></View>
+	}
 
 	return (
 		<KeyboardAvoidingView style={styles.container}>
@@ -131,8 +144,8 @@ function SignInScreen({ navigation }) {
 							{data.secureTextEntry ? (
 								<Feather name="eye-off" color="grey" size={20} />
 							) : (
-								<Feather name="eye" color="grey" size={20} />
-							)}
+									<Feather name="eye" color="grey" size={20} />
+								)}
 						</TouchableOpacity>
 					</View>
 					{data.isValidPassword ? null : (
